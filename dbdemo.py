@@ -4,22 +4,12 @@ import webapp2
 
 from google.appengine.ext import db
 
-template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir), autoescape=True)
 
 hidden_html = """
-<input type="hidden" name="food" value"%s">
+<input type="hidden" name="thingy" value"%s">
 """
-item_html = "<li>%s</li>"
 
-shopping_list_html = """
-<br>
-<br>
-<h2>Shopping List</h2>
-<ul>
-%s
-</ul>
-"""
 class Handler(webapp2.RequestHandler):
 	def write(self, *a, **kw):
 		self.response.out.write(*a, **kw)
