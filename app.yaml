@@ -1,0 +1,13 @@
+application: db-demo-1382
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: dbdemo.app
+
+libraries:
+- name: jinja2
+  version: latest
