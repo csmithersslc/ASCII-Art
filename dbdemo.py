@@ -50,4 +50,4 @@ class MainPage(Handler):
 			self.render_front(title, art, error)
 
 
-app = webapp2.WSGIApplication([('/', MainPage), 'ASCIIPage', Handler], debug=True)
+app = webapp2.WSGIApplication([('/', MainPage)], debug=True)
